@@ -1,6 +1,11 @@
 const ulEl = document.getElementById("categories");
 console.log(`Number of categories: ${ulEl.children.length}`);
 
-const categories = document.querySelectorAll(".item");
+const liEl = document.querySelectorAll(".item");
+// console.log(liEl);
 
-console.log(categories);
+for (let elem of liEl) {
+  let category = elem.firstElementChild.textContent;
+  let numberOfElem = elem.lastElementChild.children.length;
+  console.log(`Category: ${category} Elements: ${numberOfElem}`);
+}
