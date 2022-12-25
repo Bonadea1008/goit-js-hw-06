@@ -18,7 +18,10 @@ const listEl = document.querySelector(".gallery");
 const liEl = images
   .map(
     (image) =>
-      `<li><img src = "${image.url}" alt="${image.alt}" width="360"></img> </li>`
+      `<li><img src = "${image.url}" alt="${image.alt}" width="200"></img> </li>`
   )
   .join("");
+
 listEl.insertAdjacentHTML("beforeend", liEl);
+
+listEl.classList.add("gallery-img");
