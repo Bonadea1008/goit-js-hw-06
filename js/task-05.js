@@ -7,5 +7,9 @@ console.log(nameToChange);
 inputEl.addEventListener("input", onInputChange);
 
 function onInputChange(event) {
-  nameToChange.textContent = event.currentTarget.value;
+  if (event.currentTarget.value !== "") {
+    nameToChange.textContent = event.currentTarget.value;
+  } else {
+    nameToChange.textContent = "Anonymous";
+  }
 }
